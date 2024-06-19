@@ -40,7 +40,7 @@ const productSchema = new mongoose.Schema({ // 1. Make a schema
 
 const Product = mongoose.model('Product', productSchema); // 2. Make a model using said schema (Product -> products(collection))
 
-const bike = new Product({name: 'Bike Helmet', price: 19.50, categories: ['Cycling', 'Safety' /*123 will turn it into '123'*/]}) // 3. Use the model to make an actual Product
+const bike = new Product({name: 'Tire Pump', price: 19.50, categories: ['Cycling' /*123 will turn it into '123'*/]}) // 3. Use the model to make an actual Product
 
 bike.save() // 4. Save it to db
     .then(data => {
