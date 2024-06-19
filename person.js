@@ -22,4 +22,12 @@ personSchema.virtual('fullName')
         this.set({ firstName, lastName });
     });
 
+personSchema.pre('save', async function(){
+    console.log('about to save!!!')
+})
+
+personSchema.post('save', async function(){
+    console.log('saved!!!')
+})
+
 const Person = mongoose.model('Person', personSchema) // 'Person' model -> 'people' collection (lol)
